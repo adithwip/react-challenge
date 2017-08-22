@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+import Navbar from './components/navbar'
 
 // API key from Google to use API
 const API_KEY = 'AIzaSyBjEmYdKyD8VaavuLFJsCwr_pNAC2lt9PY';
@@ -24,14 +25,14 @@ class App extends Component {
 			this.setState({
 				videos: videos,
 				selectedVideo: videos[0]
-			}); // ES6 new way
-			// this.setState({ videos: videos }); // same as this 
+			});
 		});
 	}
 
 	render() {
 		return (
 			<div>
+				
 				<SearchBar />
 				<div className="container">
 					<div className="row">
